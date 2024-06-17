@@ -19,10 +19,6 @@ const badgeVariants = cva(
         success:
           "border-transparent bg-success text-success-foreground shadow hover:bg-success/80",
       },
-
-      capitalize: {
-        true: "capitalize",
-      },
     },
     defaultVariants: {
       variant: "default",
@@ -32,11 +28,18 @@ const badgeVariants = cva(
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {}
+    VariantProps<typeof badgeVariants> {
+  capitalize?: boolean;
+}
 
-function Badge({ className, variant, ...props }: BadgeProps) {
+function Badge({ className, capitalize, variant, ...props }: BadgeProps) {
   return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
+    <div
+      className={cn(badgeVariants({ variant }), className, {
+        capitalize: capitalize,
+      })}
+      {...props}
+    />
   );
 }
 

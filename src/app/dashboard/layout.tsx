@@ -2,14 +2,15 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 
 const links = [
-  { name: "avatar", href: "avatar" },
   { name: "accordion", href: "accordion" },
-  { name: "alert", href: "alert" },
-  { name: "buttons", href: "button" },
   { name: "alert dialog", href: "alert-dialog" },
-  { name: "dialog", href: "dialog" },
+  { name: "alert", href: "alert" },
+  { name: "avatar", href: "avatar" },
   { name: "badge", href: "badge" },
+  { name: "buttons", href: "button" },
   { name: "calendar", href: "calendar" },
+  { name: "card", href: "card" },
+  { name: "dialog", href: "dialog" },
 ];
 
 export default function DashboardLayout({
